@@ -661,16 +661,16 @@ ul .advantages-item:nth-child(even) {
   border: 5px solid #ffffff;
 }
 
+.control-input[type="radio"]:focus + .control-mark {
+  outline: 3px solid #82B3D3;
+}
+
 .control:hover {
   opacity: 0.6;
 }
 
 .control:active {
   opacity: 0.3;
-}
-
-.control-input[type="radio"]:focus + .control-mark {
-  outline: 3px solid #82B3D3;
 }
 
 /* Range bar */
@@ -801,7 +801,7 @@ ul .advantages-item:nth-child(even) {
   -moz-appearance: none;
   width: 290px;
   height: 49px;
-  padding: 14px 40px 14px 20px;
+  padding: 10px 52px 10px 20px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   appearance: none;
