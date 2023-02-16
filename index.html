@@ -48,7 +48,7 @@
                         </a>
                     </li>
                     <li class="favorite-item">
-                        <a class="button button-favorite-list" href="#">Хочу сюда!</a>
+                        <a class="button button-favorite-list button-medium" href="#">Хочу сюда!</a>
                     </li>
                 </ul>
             </nav>
@@ -163,13 +163,10 @@
                     <p class="main-text">
                         Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
                     </p>
-                    <a class="button" href="catalog.html" >ПОИСК ГОСТИНИЦЫ В седоне</a>
+                    <a class="button button-large" href="catalog.html" >ПОИСК ГОСТИНИЦЫ В седоне</a>
                 </div>
             </section>
             
-        </main>
-        
-        <footer class="page-footer">
             <section class="subscribe">
                 <h2 class="visually-hidden">
                     Подписка на рассылку
@@ -188,6 +185,9 @@
                     </form>
                 </div>
             </section>
+        </main>
+        
+        <footer class="page-footer">
 
             <div class="footer-container">
                 <ul class="footer-social-list">
@@ -225,6 +225,89 @@
                 </a>
             </div>
         </footer>
+    </div>
+
+    <!-- Модальное окно -->
+
+    <div class="modal-container modal-container-close">
+        <div class="modal-search-hotel">
+            <button class="button-modal-close" type="button">
+                <svg class="button-modal-close-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#000" viewBox="0 0 14 14">
+                    <path d="M14 1.3 12.7 0 7 5.7 1.3 0 0 1.3 5.7 7 0 12.7 1.3 14 7 8.3l5.7 5.7 1.3-1.3L8.3 7 14 1.3Z"/>
+                </svg>
+                <span class="visually-hidden">Закрыть окно</span>
+            </button>
+            <section class="modal-content">
+                <h2 class="modal-title">
+                    Поиск гостиницы в Седоне
+                </h2>
+                <form class="modal-search-hotel-form" action="https://echo.htmlacademy.ru/" method="post">
+                    <p class="modal-search-hotel-group">
+                        <label class="modal-search-label" for="arrival-date">Дата заезда:</label>
+                        <input class="date-field" type="text" name="arrival-date" id="arrival-date" placeholder="27 апреля 2020">
+                    </p>
+                    <p class="modal-search-hotel-text modal-search-hotel-text-invalid">
+                        Мы не можем отправить вас в прошлое.
+                    </p>
+                    <p class="modal-search-hotel-group">
+                        <label class="modal-search-label" for="departure-date">Дата выезда:</label>
+                        <input class="date-field" type="text" name="departure-date" id="departure-date" placeholder="1 сентября 2023">
+                    </p>
+                    <p class="modal-search-hotel-text">
+                        На эти даты есть свободные номера. Пока есть.
+                    </p>
+
+                    <div class="modal-search-hotel-amount">
+                        <p class="modal-search-hotel-group">
+                            <label class="modal-search-label" for="adult-amount">Взрослые:</label>
+                            <div class="amount adult-amount">
+                                <button class="amount-button left" type="button">
+                                    <svg class="amount-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="2" fill="#756157" fill-opacity=".3" viewBox="0 0 14 2">
+                                        <path d="M0 0v2h14V0H0Z"/>
+                                    </svg>
+                                    <span class="visually-hidden">Уменьшить количество взрослых</span>
+                                </button>
+                                <input class="amount-field" type="number" name="adult-amount" id="adult-amount" placeholder="2">
+                                <button class="amount-button right" type="button">
+                                    <svg class="amount-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#756157" fill-opacity=".3" viewBox="0 0 14 14">
+                                        <path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z"/>
+                                    </svg>
+                                    <span class="visually-hidden">Увеличить количество взрослых</span>
+                                </button>
+                            </div>
+                        </p>
+                        <p class="modal-search-hotel-group">
+                            <span class="modal-search-label">
+                                <label class="modal-search-label" for="children-amount">Дети:</label>
+                                <span class="tooltip">
+                                    <button class="tooltip-button" type="button" aria-labelledby="tooltip-label-date"></button>
+                                    <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                                </span>
+                            </span>
+                            <div class="amount">
+                                <button class="amount-button left" type="button">
+                                    <svg class="amount-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="2" fill="#756157" fill-opacity=".3" viewBox="0 0 14 2">
+                                        <path d="M0 0v2h14V0H0Z"/>
+                                    </svg>
+                                    <span class="visually-hidden">Уменьшить количество детей</span>
+                                </button>
+                                <input class="amount-field" type="number" name="children-amount" id="children-amount" placeholder="2">
+                                <button class="amount-button right" type="button">
+                                    <svg class="amount-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#756157" fill-opacity=".3" viewBox="0 0 14 14">
+                                        <path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z"/>
+                                    </svg>
+                                    <span class="visually-hidden">Увеличить количество детей</span>
+                                </button>
+                            </div>
+                        </p>
+                    </div>
+                    
+                    <button class="button button-add button-modal-search" type="submit">Найти</button>
+                    
+                </form>
+            </section>
+        </div>
+
     </div>
 
 </body>
