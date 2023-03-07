@@ -186,17 +186,19 @@
                         Найдено гостиниц: 38
                     </p>
                     <div class="sorting-container">
-                        <div class="sorting-group">
-                            <select class="select-control" aria-label="Сортировка">
+                        <form class="sorting-group" action="https://echo.htmlacademy.ru/" method="post">
+                            <label class="visually-hidden" for="sorting"></label>
+                            <select class="select-control" aria-label="Сортировка" id="sorting" name="sorting">
                                 <option value="popular">Сначала популярные</option>
                                 <option value="cheap" selected>Сначала дешевые</option>
                                 <option value="expensive">Сначала дорогие</option>
                             </select>
-                        </div>
+                            <button class="visually-hidden" type="submit">Отсортировать гостиницы</button>
+                        </form>
                     </div>
                     <div class="toggle-container">
                         <a class="card-grid-toggle card-grid-toggle-current" href="#">
-                            <svg class="toggle-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="#000" viewBox="0 0 16 14">
+                            <svg class="toggle-icon" aria-hidden="true" focusable="false" viewBox="0 0 16 14">
                                 <path d="M4 0H0v6h4V0ZM16 0h-4v6h4V0ZM10 0H6v6h4V0ZM4 8H0v6h4V8ZM16 8h-4v6h4V8ZM10 8H6v6h4V8Z"/>
                             </svg>
                             <span class="visually-hidden">
@@ -204,7 +206,7 @@
                             </span>
                         </a>
                         <a class="card-grid-toggle" href="#">
-                            <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="#000">
+                            <svg class="toggle-icon" aria-hidden="true" focusable="false" viewBox="0 0 16 14">
                                 <path d="M16 12H0v2h16v-2ZM14 2v6H2V2h12Zm2-2H0v10h16V0Z"/>
                             </svg>
                             <span class="visually-hidden">
@@ -212,7 +214,7 @@
                             </span>
                         </a>
                         <a class="card-grid-toggle" href="#">
-                            <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="#000" viewBox="0 0 16 14">
+                            <svg class="toggle-icon" aria-hidden="true" focusable="false" viewBox="0 0 16 14">
                                 <path d="M2 0H0v2h2V0ZM16 0H4v2h12V0ZM2 4H0v2h2V4ZM16 4H4v2h12V4ZM2 8H0v2h2V8ZM16 8H4v2h12V8ZM2 12H0v2h2v-2ZM16 12H4v2h12v-2Z"/>
                             </svg>
                             <span class="visually-hidden">
@@ -305,26 +307,45 @@
                     </li>
                 </ul>
 
-                <ol class="catalog-pagination-list">
-                    <li class="catalog-pagination-item">
-                        <a class="catalog-pagination-link catalog-pagination-link-current" href="#">1</a>
-                    </li>
-                    <li class="catalog-pagination-item">
-                        <a class="catalog-pagination-link" href="#">2</a>
-                    </li>
-                    <li class="catalog-pagination-item">
-                        <a class="catalog-pagination-link" href="#">3</a>
-                    </li>
-                    <li class="catalog-pagination-item">
-                        <a class="catalog-pagination-link" href="#">4</a>
-                    </li>
-                    <li class="catalog-pagination-item">
-                        <a class="catalog-pagination-link divider" href="#">…</a>
-                    </li>
-                    <li class="catalog-pagination-item">
-                        <a class="catalog-pagination-link" href="#">10</a>
-                    </li>
-                </ol>
+                <div class="load-more">
+                    <button class="button button-add button-more" type="button">Загрузить ещё</button>
+                </div>
+
+                <div class="pagination-wrapper">
+                    <ol class="catalog-pagination-list">
+                        <li class="catalog-pagination-item">
+                            <a class="catalog-pagination-link catalog-pagination-link-current" href="#">1</a>
+                        </li>
+                        <li class="catalog-pagination-item">
+                            <a class="catalog-pagination-link" href="#">2</a>
+                        </li>
+                        <li class="catalog-pagination-item">
+                            <a class="catalog-pagination-link" href="#">3</a>
+                        </li>
+                        <li class="catalog-pagination-item">
+                            <a class="catalog-pagination-link" href="#">4</a>
+                        </li>
+                        <li class="catalog-pagination-item">
+                            <a class="catalog-pagination-link divider" href="#">…</a>
+                        </li>
+                        <li class="catalog-pagination-item">
+                            <a class="catalog-pagination-link" href="#">10</a>
+                        </li>
+                    </ol>
+
+                    <div class="hotels-select-wrapper">
+                        <form class="select-group" action="https://echo.htmlacademy.ru/" method="post" >
+                            <label class="hotels-select-text" for="hotels-select">Гостиниц на странице:</label>
+                            <select class="hotels-select" id="hotels-select" name="hotels-select">
+                                <option value="4" selected>4</option>
+                                <option value="6" >6</option>
+                                <option value="8">8</option>
+                                <option value="12">12</option>
+                                <option value="24">24</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
 
             </section>
             
